@@ -14,7 +14,7 @@ while MONEY > 0:
     numer = random.randint(1, 37)
     if numer == 37:
         color = "zelená"
-
+        
     else:
         if numer % 2 == 1:
             color = "červená"
@@ -23,8 +23,12 @@ while MONEY > 0:
             color = "černá"
             
     print(f"Barva na kterou to padlo je: {color}.")
+        
+    if numer == 37:
+        print("Zelená není šťasná barva:(")
+        MONEY -= MONEY
 
-    if color == COLOR:
+    elif color == COLOR:
         print(f"Gratuluju, vyhrál jsi: {BET_MONEY}!")
         MONEY += BET_MONEY
     else:
